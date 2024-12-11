@@ -11,8 +11,8 @@
     "animate.css": "^4.1.1",
     "leaflet": "1.9.4",
     "loaders.css": "0.1.2",
-    "react": "18.3.1",
-    "react-dom": "18.3.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-leaflet": "4.2.1",
     "react-loaders": "3.0.1",
     "react-router-dom": "6.28.0",
@@ -55,8 +55,8 @@
     ]
   },
   "devDependencies": {
-    "@babel/eslint-parser": "7.25.9",
-    "@babel/preset-react": "7.25.9",
+    "@babel/eslint-parser": "^7.23.3",
+    "@babel/preset-react": "^7.23.3",
     "eslint-config-prettier": "9.1.0",
     "eslint-plugin-import": "2.31.0",
     "prettier": "3.3.3"
