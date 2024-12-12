@@ -123,3 +123,17 @@
     }
   }
 }
+
+@media (max-width: 767px) {
+  .contact-form ul li.half {
+    margin-left: 0;
+    width: 100%;
+  }
+  .map-wrap {
+    width: calc(100% + 30px);
+    float: none;
+    height: 500px;
+    margin-top: 10px;
+    margin-left: -30px;
+  }
+}

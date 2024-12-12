@@ -236,7 +236,12 @@ html {
       width: auto;
       transform: translateY(0);
       padding-left: 0;
+      padding-right: 10px;
     }
+  }
+
+  .container.contact-page {
+    gap: 70px;
   }
 
   .tags {
