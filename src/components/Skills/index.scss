@@ -16,3 +16,17 @@
     color: #00ff7f;
   }
 }
+
+@media (max-width: 767px) {
+  .tagcloud-wrap {
+    height: auto;
+    margin-top: 0;
+    width: 100%;
+    .tagcloud {
+      scale: 0.7;
+      width: 100%!important;
+      height: 400px!important;
+      margin: 0;
+    }
+  }
+}

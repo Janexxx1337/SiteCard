@@ -12,3 +12,9 @@ body {
   background: #252525;
   overflow: hidden;
 }
+
+@media (max-width: 767px) {
+  body {
+    overflow: visible;
+  }
+}

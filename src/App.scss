@@ -50,3 +50,12 @@ textarea {
   animation: fadeOut 1s 1s;
   animation-fill-mode: forwards;
 }
+
+@media (max-width: 767px) {
+  body {
+    overflow: visible!important;
+  }
+  .App {
+    padding-left: 90px;
+  }
+}
