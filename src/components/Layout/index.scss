@@ -228,7 +228,8 @@ html {
   }
   .container.contact-page,
   .container.about-page,
-  .container.skills-page {
+  .container.skills-page,
+  .container.home-page {
     display: flex;
     flex-direction: column-reverse;
     .text-zone {
