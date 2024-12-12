@@ -73,26 +73,26 @@
 
       &:first-child {
         &:after {
-          content: 'HOME';
+          content: 'ГЛАВНАЯ';
         }
       }
     }
 
     a.about-link {
       &:after {
-        content: 'ABOUT';
+        content: 'О НАС';
       }
     }
 
     a.contact-link {
       &:after {
-        content: 'CONTACT';
+        content: 'КОНТАКТЫ';
       }
     }
 
     a.skills-link {
       &:after {
-        content: 'SKILLS';
+        content: 'НАВЫКИ';
       }
     }
 

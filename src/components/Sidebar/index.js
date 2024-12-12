@@ -11,7 +11,7 @@ import { Link, NavLink } from 'react-router-dom'
 
 import codechefLogo from '../../assets/images/codechef.png'
 import LogoS from '../../assets/images/logo-s.png'
-import LogoSubtitle from '../../assets/images/Sudip_logo_white.png'
+import LogoSubtitle from '../../assets/images/Sudip_logo_white.svg'
 
 const Sidebar = () => {
   return (

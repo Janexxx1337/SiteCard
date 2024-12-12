@@ -9,7 +9,7 @@ import './index.scss'
 const Skills = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
 
-  const skillsArray = 'Skills'.split('')
+  const skillsArray = 'Навыки'.split('')
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -31,17 +31,17 @@ const Skills = () => {
             <br />
           </h1>
           <p>
-            I have a strong foundation in both development and operations, with
-            a focus on creating seamless, efficient systems. My experience
-            includes automating deployment processes, designing scalable
-            applications, and working with cloud technologies to deliver
-            reliable solutions.
+            У меня есть прочный фундамент как в области разработки, так и в операционной деятельности, благодаря
+            основное внимание уделяется созданию бесшовных и эффективных систем. Мой опыт
+            включает автоматизацию процессов развертывания, разработку масштабируемых
+            приложений и работа с облачными технологиями для обеспечения
+            надежные решения.
           </p>
           <p>
-            My skill set spans across DevOps, machine learning, full-stack
-            development, and cloud infrastructure. I’m committed to staying
-            updated with the latest advancements and continually refining my
-            expertise to tackle complex challenges effectively.
+            Мой набор навыков охватывает DevOps, машинное обучение, полномасштабную
+            разработку и облачную инфраструктуру. Я твердо намерен остаться
+            обновленный в соответствии с последними достижениями и постоянно совершенствующий свой
+            опыт, необходимый для эффективного решения сложных задач.
           </p>
         </div>
 

@@ -12,7 +12,7 @@ import styles from './index.scss'
 const Home = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
 
-  const nameArray = 'udip'.split('')
+  const nameArray = 'anex'.split('')
   const jobArray = 'Software Engineer'.split('')
   const interestArray = 'FullStack | DevOps | Web3'.split('')
 
@@ -28,11 +28,15 @@ const Home = () => {
       <div className="container home-page">
         <div className="text-zone">
           <h1>
-            <span className={letterClass}>H</span>
-            <span className={`${letterClass} _12`}>i,</span>
+            <span className={letterClass}>П</span>
+            <span className={letterClass}>р</span>
+            <span className={letterClass}>и</span>
+            <span className={letterClass}>в</span>
+            <span className={letterClass}>е</span>
+            <span className={`${letterClass} _12`}>т,</span>
             <br />
-            <span className={`${letterClass} _13`}>I</span>
-            <span className={`${letterClass} _14`}>'m</span>
+            <span className={`${letterClass} _13`}>М</span>
+            <span className={`${letterClass} _14`}>ы</span>
             <img src={LogoTitle} alt="Sudip Banerjee" />
             <AnimatedLetters
               letterClass={letterClass}
@@ -53,11 +57,11 @@ const Home = () => {
             />
           </h1>
           <h2>
-            Streamlining Workflows | Deploying Intelligent Systems | Building
-            Scalable Applications
+            Оптимизация рабочих процессов | Внедрение интеллектуальных систем | Создание
+            масштабируемых приложений
           </h2>
           <Link to="/contact" className="flat-button">
-            CONTACT ME
+            КОНТАКТЫ
           </Link>
         </div>
         <Logo />

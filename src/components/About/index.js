@@ -16,7 +16,7 @@ import AnimatedLetters from '../AnimatedLetters'
 import './index.scss'
 
 const About = () => {
-  const aboutArray = 'About Me'.split('')
+  const aboutArray = 'О нас'.split('')
 
   const [letterClass, setLetterClass] = useState('text-animate')
 
@@ -39,17 +39,13 @@ const About = () => {
             />
           </h1>
           <p>
-            I’m a DevOps and Full Stack Engineer with over 2 years of
-            experience, specializing in automating workflows, optimizing CI/CD
-            pipelines, and deploying intelligent systems. My expertise spans
-            across DevOps, full-stack, blockchain development, and aritificial
-            intelligence, with a strong foundation in security.
+            Я инженер-девелопер и специалист по полному стеку с более чем 2-летним опытом работы. Я специализируюсь на автоматизации рабочих процессов, оптимизации конвейеров CI/CD и развертывании интеллектуальных систем. Мой опыт охватывает DevOps, полный стек, разработку блокчейна и искусственный интеллект, а также основы безопасности.
           </p>
           <p>
-            I’m passionate about solving real-world problems through innovative
-            technology and continuously learning to stay ahead of industry
-            trends. Whether it's streamlining infrastructure or building
-            scalable applications, I bring a holistic approach to every project.
+            Я увлечённо решаю реальные проблемы с помощью инновационных
+            технологий и постоянно учусь, чтобы опережать отраслевые
+            тенденции. Будь то оптимизация инфраструктуры или создание
+            масштабируемых приложений, я подхожу к каждому проекту комплексно.
           </p>
         </div>
 

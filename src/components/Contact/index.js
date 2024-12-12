@@ -15,7 +15,7 @@ const Contact = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
   const form = useRef()
   const [loading, setLoading] = useState(false)
-  const contactArray = 'Contact Me'.split('')
+  const contactArray = 'Контакты'.split('')
 
   useEffect(() => {
     setTimeout(() => {
@@ -130,16 +130,21 @@ const Contact = () => {
             />
           </h1>
           <p>
-            I’m open to new opportunities and collaborations! If you’re looking
-            for someone who can bring fresh ideas and deliver impactful results,
-            let’s get in touch!
+            Мы открыты для новых возможностей и сотрудничества! Если вы ищете
+            кого-то, кто может предложить свежие идеи и добиться впечатляющих результатов,
+            давайте свяжемся друг с другом!
           </p>
 
           <div className="contact-form">
             <form ref={form} onSubmit={sendEmail}>
               <ul>
                 <li className="half">
-                  <input placeholder="Name" type="text" name="name" required />
+                  <input
+                    placeholder="Имя"
+                    type="text"
+                    name="name"
+                    required
+                  />
                 </li>
                 <li className="half">
                   <input
@@ -151,7 +156,7 @@ const Contact = () => {
                 </li>
                 <li>
                   <input
-                    placeholder="Subject"
+                    placeholder="Вопрос"
                     type="text"
                     name="subject"
                     required
@@ -159,7 +164,7 @@ const Contact = () => {
                 </li>
                 <li>
                   <textarea
-                    placeholder="Message"
+                    placeholder="Сообщение"
                     name="message"
                     required
                   ></textarea>
@@ -170,7 +175,7 @@ const Contact = () => {
                     className="flat-button"
                     disabled={loading}
                   >
-                    {loading ? <ClipLoader color="#fff" size={20} /> : 'SEND'}
+                    {loading ? <ClipLoader color="#fff" size={20} /> : 'ОТПРАВИТЬ'}
                   </button>
                 </li>
               </ul>

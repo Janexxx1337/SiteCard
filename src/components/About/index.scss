@@ -79,3 +79,25 @@
     transform: rotateX(90deg);
   }
 }
+
+@media (max-width: 991px) {
+  .stage-cube-cont {
+    width: 30%;
+    padding-top: 14%;
+  }
+  .cubespinner {
+    scale: 0.7;
+  }
+}
+
+@media (max-width: 767px) {
+  .stage-cube-cont {
+    width: 100%;
+    padding-top: 10%;
+    position: relative;
+    overflow: visible;
+  }
+  .cubespinner {
+    scale: 0.7;
+  }
+}

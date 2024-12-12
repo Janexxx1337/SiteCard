@@ -193,3 +193,33 @@ html {
     transform: translateY(-2000px);
   }
 }
+
+@media (max-width: 991px) {
+  .container.contact-page,
+  .container.about-page,
+  .container.skills-page {
+    .text-zone {
+      width: 50%;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .container.contact-page,
+  .container.about-page,
+  .container.skills-page {
+    display: flex;
+    flex-direction: column-reverse;
+    .text-zone {
+      position: static;
+      left: 100px;
+      width: calc(100% - 120px);
+      transform: translateY(0);
+      padding-left: 100px;
+    }
+  }
+
+  .tags {
+    left: 90px;
+  }
+}
