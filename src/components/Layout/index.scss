@@ -210,6 +210,13 @@ html {
     overflow-x: hidden;
     //overflow-y: visible;
   }
+  #stars,
+  #stars2,
+  #stars3 {
+    &:after {
+      top: auto!important;
+    }
+  }
   .top-tags {
     position: relative !important;
     top: 10px;
