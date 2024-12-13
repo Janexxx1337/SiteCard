@@ -12,8 +12,44 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #252525;
+  background-blend-mode: darken;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   overflow: hidden;
+  z-index: 0;
+
+  &:after {
+    content: " ";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0.5;
+    z-index: -1;
+  }
+
+  &.home-page {
+    background-image: url("assets/images/gif-bg-7.webp");
+  }
+
+  &.about-page {
+    background-image: url("assets/images/gif-bg-8.webp");
+  }
+
+  &.skills-page {
+    background-image: url("assets/images/gif-bg-9.webp");
+
+    &:after {
+      opacity: 0.7;
+    }
+  }
+
+  &.contact-page {
+    background-image: url("assets/images/gif-bg-10.webp");
+  }
 }
 
 @media (max-width: 767px) {

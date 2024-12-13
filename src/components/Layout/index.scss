@@ -185,6 +185,12 @@ html {
   }
 }
 
+#stars,
+#stars2,
+#stars3 {
+  display: none;
+}
+
 @keyframes animStar {
   from {
     transform: translateY(0px);
@@ -213,6 +219,7 @@ html {
   #stars,
   #stars2,
   #stars3 {
+    display: none;
     &:after {
       top: auto!important;
     }
