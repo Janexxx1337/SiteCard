@@ -243,6 +243,8 @@ html {
 
   .container.contact-page {
     gap: 70px;
+    flex-direction: column;
+    padding-top: 30px;
   }
 
   .container.home-page .text-zone {
