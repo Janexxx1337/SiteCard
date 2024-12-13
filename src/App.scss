@@ -60,3 +60,9 @@ textarea {
     min-height: 100vh;
   }
 }
+
+@media (max-width: 525px) {
+  .App {
+    padding: 60px 0 60px 20px;
+  }
+}

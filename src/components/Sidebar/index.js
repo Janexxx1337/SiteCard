@@ -1,5 +1,5 @@
 import './index.scss'
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { faGithub, faTelegram } from '@fortawesome/free-brands-svg-icons'
 import {
   faEnvelope,
   faHome,
@@ -48,29 +48,20 @@ const Sidebar = () => {
         <ul>
           <li>
             <a
-              href="https://www.linkedin.com/in/banerjee-sudip/"
+              href="https://t.me/janexxx1337"
               target="_blank"
               rel="noreferrer"
             >
-              <FontAwesomeIcon icon={faLinkedin} color="#b9b9b9" />
+              <FontAwesomeIcon icon={faTelegram} color="#b9b9b9" />
             </a>
           </li>
           <li>
             <a
-              href="https://github.com/metal-oopa"
+              href="https://github.com/Janexxx1337"
               target="_blank"
               rel="noreferrer"
             >
               <FontAwesomeIcon icon={faGithub} color="#b9b9b9" />
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.codechef.com/users/metal_oopa"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img src={codechefLogo} width="24" alt="Codechef" />
             </a>
           </li>
         </ul>
