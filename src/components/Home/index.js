@@ -14,7 +14,7 @@ const Home = () => {
 
   const nameArray = 'anex'.split('')
   const jobArray = 'Software Engineer'.split('')
-  const interestArray = 'FullStack | DevOps | Web3'.split('')
+  const interestArray = 'FullStack | Web3'.split('')
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -36,7 +36,7 @@ const Home = () => {
             <span className={`${letterClass} _12`}>т,</span>
             <br />
             <span className={`${letterClass} _13`}>Я</span>
-            <img src={LogoTitle} alt="Sudip Banerjee" />
+            <img src={LogoTitle} alt="Janexxx" />
             <AnimatedLetters
               letterClass={letterClass}
               strArray={nameArray}
@@ -56,13 +56,14 @@ const Home = () => {
             />
           </h1>
           <h2>
-            Оптимизация бизнес процессов | Внедрение искуственного интелекта | Боты | Telegram web app | Сайты любой сложности
+            Разработка высоконагруженных веб-приложений | PWA & SPA | Кросс-платформенные решения | Интеграция AI/ML |
+            Оптимизация производительности
           </h2>
           <Link to="/contact" className="flat-button">
             КОНТАКТЫ
           </Link>
         </div>
-        <Logo />
+        <Logo/>
       </div>
 
       <Loader type="pacman" />

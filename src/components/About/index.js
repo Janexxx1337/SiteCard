@@ -33,38 +33,41 @@ const About = () => {
         <div className="text-zone">
           <h1>
             <AnimatedLetters
-              letterClass={letterClass}
-              strArray={aboutArray}
-              idx={15}
+                letterClass={letterClass}
+                strArray={aboutArray}
+                idx={15}
             />
           </h1>
           <p>
-            Я инженер-девелопер и специалист по полному стеку с более чем 5-летним опытом работы. Я специализируюсь на автоматизации рабочих процессов, оптимизации конвейеров CI/CD и развертывании интеллектуальных систем. Мой опыт охватывает DevOps, полный стек и искусственный интеллект, а также основы безопасности.
+            Я опытный фронтенд-разработчик с более чем 5-летним стажем в создании современных веб-приложений. Я
+            специализируюсь на разработке высокопроизводительных пользовательских интерфейсов, использовании современных
+            JavaScript-фреймворков и оптимизации клиентской части приложений. Мой опыт охватывает весь спектр
+            фронтенд-разработки: от архитектуры приложений до тонкой настройки производительности.
           </p>
           <p>
-            Я увлечённо решаю реальные проблемы с помощью инновационных
-            технологий и постоянно учусь, чтобы опережать отраслевые
-            тенденции. Будь то оптимизация инфраструктуры или создание
-            масштабируемых приложений, я подхожу к каждому проекту комплексно.
+            Я постоянно совершенствую свои навыки и следую последним тенденциям в области веб-разработки. Будь то
+            создание сложных SPA-приложений или оптимизация производительности существующих систем, я всегда стремлюсь к
+            созданию качественных и масштабируемых решений, уделяя особое внимание пользовательскому опыту и
+            техническому совершенству.
           </p>
         </div>
 
         <div className="stage-cube-cont">
           <div className="cubespinner">
             <div className="face1">
-              <FontAwesomeIcon icon={faPython} color="#4B8BBE" />
+              <FontAwesomeIcon icon={faPython} color="#4B8BBE"/>
             </div>
             <div className="face2">
-              <FontAwesomeIcon icon={faAws} color="#F06529" />
+              <FontAwesomeIcon icon={faAws} color="#F06529"/>
             </div>
             <div className="face3">
-              <FontAwesomeIcon icon={faDocker} color="#28A4D9" />
+              <FontAwesomeIcon icon={faDocker} color="#28A4D9"/>
             </div>
             <div className="face4">
-              <FontAwesomeIcon icon={faGolang} color="#5ED4F4" />
+              <FontAwesomeIcon icon={faGolang} color="#5ED4F4"/>
             </div>
             <div className="face5">
-              <FontAwesomeIcon icon={faJsSquare} color="#EFD81D" />
+              <FontAwesomeIcon icon={faJsSquare} color="#EFD81D"/>
             </div>
             <div className="face6">
               <FontAwesomeIcon icon={faGitAlt} color="#EC4D28" />
