@@ -91,22 +91,17 @@
 }
 
 @media (max-width: 767px) {
-  .logo-container svg {
-    width: 200px;
-    height: 320px;
-    bottom: 0;
-    position: absolute;
-    top: 50px;
+  .logo-container {
+    position: static;
+    right: 0;
+    height: 400px;
   }
   .logo-container .solid-logo {
     position: absolute;
     top: 50px;
     margin: auto;
     width: 200px;
-  }
-  .logo-container {
-    right: 0;
-    height: 400px;
+    right: 50px;
   }
 }
 
