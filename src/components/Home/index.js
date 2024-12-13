@@ -35,8 +35,7 @@ const Home = () => {
             <span className={letterClass}>е</span>
             <span className={`${letterClass} _12`}>т,</span>
             <br />
-            <span className={`${letterClass} _13`}>М</span>
-            <span className={`${letterClass} _14`}>ы</span>
+            <span className={`${letterClass} _13`}>Я</span>
             <img src={LogoTitle} alt="Sudip Banerjee" />
             <AnimatedLetters
               letterClass={letterClass}
@@ -57,8 +56,7 @@ const Home = () => {
             />
           </h1>
           <h2>
-            Оптимизация рабочих процессов | Внедрение интеллектуальных систем | Создание
-            масштабируемых приложений
+            Оптимизация бизнес процессов | Внедрение искуственного интелекта | Боты | Telegram web app | Сайты любой сложности
           </h2>
           <Link to="/contact" className="flat-button">
             КОНТАКТЫ
