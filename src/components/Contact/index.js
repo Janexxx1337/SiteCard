@@ -1,5 +1,4 @@
-import { useEffect, useState } from 'react'
-import { useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet'
 import Loader from 'react-loaders'
@@ -16,51 +15,11 @@ const Contact = () => {
   const [loading, setLoading] = useState(false)
   const contactArray = 'Контакты'.split('')
 
-  // Замените на ваши данные
-  const TELEGRAM_BOT_TOKEN = '7883007488:AAFKAW24PTAOLkINjSHgsb-0x973LcPa_nI'
-  const TELEGRAM_CHAT_ID = '1320177197'
-
   useEffect(() => {
     setTimeout(() => {
       setLetterClass('text-animate-hover')
     }, 3000)
   }, [])
-
-  const sendToTelegram = async (formData) => {
-    const message = `
-📨 Новое сообщение!
-
-👤 Имя: ${formData.name}
-📧 Email: ${formData.email}
-📝 Вопрос: ${formData.subject}
-💬 Сообщение: ${formData.message}
-    `
-
-    const url = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`
-
-    try {
-      const response = await fetch(url, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          chat_id: TELEGRAM_CHAT_ID,
-          text: message,
-          parse_mode: 'HTML'
-        })
-      })
-
-      if (!response.ok) {
-        throw new Error('Failed to send message to Telegram')
-      }
-
-      return true
-    } catch (error) {
-      console.error('Error sending to Telegram:', error)
-      return false
-    }
-  }
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -74,9 +33,17 @@ const Contact = () => {
     }
 
     try {
-      const success = await sendToTelegram(formData)
+      const response = await fetch('/api/send-telegram', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData)
+      });
 
-      if (success) {
+      const data = await response.json();
+
+      if (data.success) {
         toast.success('Сообщение успешно отправлено!', {
           position: 'bottom-center',
           autoClose: 3500,
