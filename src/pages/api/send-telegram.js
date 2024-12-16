@@ -13,7 +13,6 @@ export default async function handler(req, res) {
         hasChat: !!process.env.TELEGRAM_CHAT_ID
     });
 
-
     const telegramMessage = `
         📨 Новое сообщение!
         
