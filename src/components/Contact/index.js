@@ -21,49 +21,62 @@ const Contact = () => {
     }, 3000)
   }, [])
 
+// В компоненте Contact/index.js измените функцию handleSubmit:
+
   const handleSubmit = async (e) => {
-    e.preventDefault()
-    setLoading(true)
+    e.preventDefault();
+    setLoading(true);
 
     const formData = {
       name: form.current.name.value,
       email: form.current.email.value,
       subject: form.current.subject.value,
       message: form.current.message.value
-    }
+    };
+
+    const telegramMessage = `
+📨 Новое сообщение!
+
+👤 Имя: ${formData.name}
+📧 Email: ${formData.email}
+📝 Вопрос: ${formData.subject}
+💬 Сообщение: ${formData.message}
+    `;
 
     try {
-      const response = await fetch('/api/send-telegram', {
+      const response = await fetch(`https://api.telegram.org/bot${process.env.REACT_APP_TELEGRAM_BOT_TOKEN}/sendMessage`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData)
+        body: JSON.stringify({
+          chat_id: process.env.REACT_APP_TELEGRAM_CHAT_ID,
+          text: telegramMessage,
+          parse_mode: 'HTML'
+        })
       });
 
-      const data = await response.json();
-
-      if (data.success) {
-        toast.success('Сообщение успешно отправлено!', {
-          position: 'bottom-center',
-          autoClose: 3500,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: 'dark',
-        })
-
-        setTimeout(() => {
-          form.current.reset()
-          setLoading(false)
-        }, 3800)
-      } else {
-        throw new Error('Failed to send message')
+      if (!response.ok) {
+        throw new Error('Failed to send message to Telegram');
       }
+
+      toast.success('Сообщение успешно отправлено!', {
+        position: 'bottom-center',
+        autoClose: 3500,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: 'dark',
+      });
+
+      form.current.reset();
+      setLoading(false);
+
     } catch (error) {
-      setLoading(false)
+      console.error('Error:', error);
+      setLoading(false);
       toast.error('Ошибка при отправке сообщения, попробуйте снова', {
         position: 'bottom-center',
         autoClose: 3500,
@@ -73,9 +86,9 @@ const Contact = () => {
         draggable: true,
         progress: undefined,
         theme: 'dark',
-      })
+      });
     }
-  }
+  };
 
   return (
       <>
