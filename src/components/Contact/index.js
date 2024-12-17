@@ -102,11 +102,9 @@ const Contact = () => {
               />
             </h1>
             <p>
-              Мы открыты для новых возможностей и сотрудничества! Если вы ищете
-              кого-то, кто может предложить свежие идеи и добиться впечатляющих результатов,
-              давайте свяжемся друг с другом!
+              Я открыт для новых возможностей и профессионального сотрудничества. Если вы ищете специалиста, способного
+              предложить инновационные решения и достичь высоких результатов, буду рад обсудить потенциальные проекты.
             </p>
-
             <div className="contact-form">
               <form ref={form} onSubmit={handleSubmit}>
                 <ul>
@@ -147,16 +145,16 @@ const Contact = () => {
                         className="flat-button"
                         disabled={loading}
                     >
-                      {loading ? <ClipLoader color="#fff" size={20} /> : 'ОТПРАВИТЬ'}
+                      {loading ? <ClipLoader color="#fff" size={20}/> : 'ОТПРАВИТЬ'}
                     </button>
                   </li>
                 </ul>
-                <ToastContainer />
+                <ToastContainer/>
               </form>
             </div>
           </div>
         </div>
-        <Loader type="pacman" />
+        <Loader type="pacman"/>
       </>
   )
 }
