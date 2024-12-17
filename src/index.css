@@ -12,12 +12,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow: hidden;
-  position: fixed; /* изменено с relative для iOS фикса */
-  width: 100%; /* добавлено для iOS фикса */
-  height: 100vh; /* добавлено для iOS фикса */
-  height: -webkit-fill-available; /* добавлено для iOS фикса */
+  position: relative;
   min-height: 100vh;
-  -webkit-overflow-scrolling: touch; /* добавлено для iOS фикса */
 }
 
 /* Общий фоновый стиль для всех страниц */
@@ -69,22 +65,9 @@ body.contact-page::before {
   background-image: url("assets/images/gif-bg-10.webp");
 }
 
-.container {
-  height: 100%;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-  padding-bottom: env(safe-area-inset-bottom);
-}
-
 @media (max-width: 767px) {
   body {
     overflow: visible;
-    position: fixed; /* добавлено для сохранения фикса на мобильных */
-  }
-
-  .container {
-    height: 100%;
-    overflow-y: auto;
   }
 }
 
