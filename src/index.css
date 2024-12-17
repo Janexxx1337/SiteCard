@@ -1,55 +1,68 @@
 * {
   box-sizing: border-box;
 }
+
 html {
   font-size: 62.5%;
 }
 
 body {
   margin: 0;
-  font:
-    300 11px/1.4 'Helvetica Neue',
-    sans-serif;
+  font: 300 11px/1.4 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-blend-mode: darken;
+  overflow: hidden;
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Общий фоновый стиль для всех страниц */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  overflow: hidden;
-  z-index: 0;
+  opacity: 1;
+  z-index: -2;
+}
 
-  &:after {
-    content: " ";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: black;
-    opacity: 0.5;
-    z-index: -1;
-  }
+/* Затемняющий слой */
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 0.5;
+  z-index: -1;
+}
 
-  &.home-page {
-    background-image: url("assets/images/gif-bg-7.webp");
-  }
+/* Специфичные фоны для разных страниц */
+body.home-page::before {
+  background-image: url("assets/images/gif-bg-7.webp");
+}
 
-  &.about-page {
-    background-image: url("assets/images/gif-bg-8.webp");
-  }
+body.about-page::before {
+  background-image: url("assets/images/gif-bg-8.webp");
+}
 
-  &.skills-page {
-    background-image: url("assets/images/gif-bg-9.webp");
+body.skills-page::before {
+  background-image: url("assets/images/gif-bg-9.webp");
+}
 
-    &:after {
-      opacity: 0.7;
-    }
-  }
+body.skills-page::after {
+  opacity: 0.7;
+}
 
-  &.contact-page {
-    background-image: url("assets/images/gif-bg-10.webp");
-  }
+body.contact-page::before {
+  background-image: url("assets/images/gif-bg-10.webp");
 }
 
 @media (max-width: 767px) {
