@@ -9,20 +9,32 @@
   top: 35px;
 }
 
+.top-tags {
+  bottom: auto;
+  top: 35px;
+}
+
 .tags {
-  // color: #ffd700;
-  // color: #ff4500; // red
-  color: #00ff7f; // green
+  color: #00ff7f;
   opacity: 0.9;
   position: absolute;
   bottom: 0;
-  left: 120px;
-  font-size: 18px;
+  left: 20px;
+  font-size: 16px;
   font-family: 'La Belle Aurore', cursive;
 }
 
+/* Добавляем медиа-запрос для десктопов */
+@media screen and (min-width: 768px) {
+  .tags {
+    left: 120px;
+    font-size: 18px;
+  }
+}
+
 .bottom-tag-html {
-  margin-left: -20px;
+  left: 0;
+  position: relative;
 }
 
 .container {
