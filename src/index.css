@@ -70,3 +70,9 @@ body.contact-page::before {
     overflow: visible;
   }
 }
+
+@media (max-width: 475px) {
+  .home-page .text-zone h1 {
+    font-size: 40px;
+  }
+}
